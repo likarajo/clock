@@ -35,6 +35,7 @@ function clock() {
   document.getElementById("mi").innerHTML = twoDigit(curr.getMinutes());
   document.getElementById("ss").innerHTML = twoDigit(curr.getSeconds());
   document.getElementById("ms").innerHTML = threeDigit(curr.getMilliseconds());
+  document.getElementById("local").innerHTML = "Local";
 }
 
 var x = 1;

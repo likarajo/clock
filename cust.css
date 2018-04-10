@@ -15,6 +15,16 @@
   flex-shrink: 0;
 }
 
+#timezoneSelect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+}
+
 #clock {
   border-style: solid;
   border-width: thick;
@@ -43,4 +53,4 @@
 
 #dayFormat, #yearFormat, #monthFormat, #hoursFormat { display: none; }
 #dayS, #dayL, #dd, #mm, #monthL, #monthS, #yyyy, #yy, #hh24, #hh12, #mi, #ss, #ms, #ampm, #hrs { display: none; }
-#dayContainer, #dateContainer, #monthContainer, #yearContainer, #hourContainer, #minuteContainer, #secondContainer, #millisecondContainer, #ampmhrContainer { display: inline-block; }
+#dayContainer, #dateContainer, #monthContainer, #yearContainer, #hourContainer, #minuteContainer, #secondContainer, #millisecondContainer, #ampmhrContainer, #timezoneContainer { display: inline-block; }
