@@ -1,47 +1,93 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 
 <head>
+
   <title>clock</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
-  <base href="https://likarajo.github.io/clock/">
-  <link rel="canonical" href="https://likarajo.github.io/clock" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="cust.css" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <meta name="description" content="Twitter Data Mining" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <base href="https://likarajo.github.io/clock/" />
+  <link rel="canonical" href="https://likarajo.github.io/clock/" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/main.js"></script>
+  <script src="https://buttons.github.io/buttons.js" async defer></script>
+
 </head>
 
 <body>
 
-  <div id="page" class="content">
-    <div id="wrapper">
-      <div id="timezoneSelect">
-        <h2>Clock</h2>
+  <div class="wrapper">
+
+    <header>
+      <h1>clock</h1>
+      <p>Clock built with JavaScript</p>
+      <div id="banner">
+        <a class="github-button" aria-label="View likarajo/clock on GitHub" href="https://github.com/likarajo/clock" target="_blank" data-size="large">View on Github</a>
         <br>
-        Select Timezone:
-        <br><br>
-        <label><input id="timeLocal" type="radio" name="timezoneSelect" value="Local">&nbsp;Local</label>
-        <label><input id="timeUTC" type="radio" name="timezoneSelect" value="2">&nbsp;UTC</label>
-        <br>
-        <button type="button" name="showClock" onclick="showClock()">Show Clock</button>
+        <a class="github-button" aria-label="Fork likarajo/clock on GitHub" href="https://github.com/likarajo/clock/fork" target="_blank" data-icon="octicon-repo-forked" data-show-count="true">Fork</a>
+        <a class="github-button" aria-label="Star likarajo/clock on GitHub" href="https://github.com/likarajo/clock" target="_blank" data-icon="octicon-star" data-show-count="true">Star</a>
       </div>
+    </header>
+
+    <div id="main">
+      <section>
+        <h3><a id="demoLink" href="clock.html"><b>See Demo</b></a></h3>
+        <h3>How to use:</h3>
+        <p>The User has to select the timezone for which he wants to view the clock - either <em>UTC</em> or <em>Local</em>.</p>
+        <p>Once the user selects the option and clicks on <b>Show Clock</b> button, the corresponding page will open in a new window.</p>
+        <p>Therein, the user has to select the options for the attributes of the clock and the respective formats - namely,</p>
+        <ul>
+          <li>Day of Week
+            <ul>
+              <li>Full name (Monday, Tuesday, etc.)</li>
+              <li>Short name (Mon, Tue, etc.)</li>
+            </ul>
+          </li>
+          <li>Date</li>
+          <li>Month
+            <ul>
+              <li>Full name (March, April, etc.)</li>
+              <li>Short name (Mar, Apr, etc.)</li>
+              <li>Month number (2-digit) (03, 04, etc.)</li>
+            </ul>
+          </li>
+          <li>Year
+            <ul>
+              <li>Full year (2018, 2019, etc.)</li>
+              <li>Short year (2-digit) (18, 19, etc.)</li>
+            </ul>
+          </li>
+          <li>Hours
+            <ul>
+              <li>24 hrs (11, 12, 13, etc.)</li>
+              <li>12 hrs (11, 12, 01) with AM/PM</li>
+            </ul>
+          </li>
+          <li>Minutes</li>
+          <li>Seconds</li>
+          <li>Milliseconds</li>
+        </ul>
+        <p>As the user selects the options, the corresponding attributes of the clock gets displayed.</p>
+
+      </section>
+
     </div>
+
+    <footer>
+      <h3>&copy; 2017 <a href="https://likarajo.github.io" target="_blank">likarajo</a></h3>
+    </footer>
+
   </div>
 
-  <script>
-  function showClock() {
-    var _local = document.getElementById("timeLocal");
-    var _utc = document.getElementById("timeUTC");
-    if(_local.checked == true) {
-      window.open("clock.html");
-    } else if (_utc.checked == true) {
-      window.open("clockUTC.html");
-    } else {
-      alert("Please select Timezone!");
-    }
-  }
-  </script>
-
 </body>
+
 </html>
