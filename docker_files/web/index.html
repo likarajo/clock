@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>clock</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
+  <base href="https://likarajo.github.io/clock/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/cust.css" />
+</head>
+
+<body>
+
+  <div id="page" class="content">
+    <div id="wrapper">
+      <div id="timezoneSelect">
+        <h4><a id="homeLink" href="https://likarajo.github.io/clock"><b>Go to Home</b></a></h4>
+        <br>
+        Select Timezone:
+        <br><br>
+        <label><input id="timeLocal" type="radio" name="timezoneSelect" value="Local">&nbsp;Local</label>
+        <label><input id="timeUTC" type="radio" name="timezoneSelect" value="2">&nbsp;UTC</label>
+        <br>
+        <button type="button" name="showClock" onclick="showClock()">Show Clock</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function showClock() {
+    var _local = document.getElementById("timeLocal");
+    var _utc = document.getElementById("timeUTC");
+    if(_local.checked == true) {
+      window.open("clockLocal.html");
+    } else if (_utc.checked == true) {
+      window.open("clockUTC.html");
+    } else {
+      alert("Please select Timezone!");
+    }
+  }
+  </script>
+
+</body>
+</html>

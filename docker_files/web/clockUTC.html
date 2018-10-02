@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>clock UTC</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1" />
+  <base href="https://likarajo.github.io/clock/">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/cust.css" />
+  <script type="text/javascript" src="assets/clockUTC.js"></script>
+</head>
+
+<body>
+
+  <div id="page" class="content">
+    <div id="wrapper">
+      <div id="clock-features">
+        <form id="options">
+          <h4>Select the clock features that you want to display</h4>
+          <input id="day" type="checkbox" name="day" value="1" onchange="disp('day','dayFormat')" onclick="disp('day', 'dayContainer')"> Day of Week
+          <div id="dayFormat">
+            Select format:
+            <input id="dayLong" type="radio" name="dayFormat" value="1" onchange="showDay()"> Monday
+            <input id="dayShort" type="radio" name="dayFormat" value="2" onchange="showDay()"> Mon
+          </div>
+          <br>
+          <input id="date" type="checkbox" name="date" value="1" onchange="disp('date','dd')" onclick="disp('date', 'dateContainer')"> Date
+          <br>
+          <input id="month" type="checkbox" name="month" value="1" onchange="disp('month','monthFormat')" onclick="disp('month', 'monthContainer')"> Month
+          <div id="monthFormat">
+            Select format:
+            <input id="monthLong" type="radio" name="monthFormat" value="1" onchange="showMonth()"> April
+            <input id="monthShort" type="radio" name="monthFormat" value="2" onchange="showMonth()"> Apr
+            <input id="month2digit" type="radio" name="monthFormat" value="3" onchange="showMonth()"> 04
+          </div>
+          <br>
+          <input id="year" type="checkbox" name="year" value="1" onchange="disp('year','yearFormat')" onclick="disp('year', 'yearContainer')"> Year
+          <div id="yearFormat">
+            Select format:
+            <input id="yearLong" type="radio" name="yearFormat" value="1" onchange="showYear()"> 2018
+            <input id="yearShort" type="radio" name="yearFormat" value="2" onchange="showYear()"> 18
+          </div>
+          <br>
+          <input id="hours" type="checkbox" name="hours" value="1" onchange="disp('hours','hoursFormat')" onclick="disp('hours', 'hourContainer')"> Hours
+          <div id="hoursFormat">
+            Select format:
+            <input id="hour24" type="radio" name="hoursFormat" value="1" onchange="showHour()"> 24 hrs
+            <input id="hour12" type="radio" name="hoursFormat" value="2" onchange="showHour()"> 12 hrs (AM/PM)
+          </div>
+          <br>
+          <input id="minutes" type="checkbox" name="minutes" value="1" onchange="disp('minutes','mi')" onclick="disp('minutes', 'minuteContainer')"> Minutes
+          <br>
+          <input id="seconds" type="checkbox" name="seconds" value="1" onchange="disp('seconds','ss')" onclick="disp('seconds', 'secondContainer')"> Seconds
+          <br>
+          <input id="milliseconds" type="checkbox" name="milliseconds" value="1" onchange="disp('milliseconds','ms')" onclick="disp('milliseconds', 'millisecondContainer')"> Milliseconds
+          <br>
+        </form>
+      </div>
+      <div id="clock">
+        <div id="dayContainer"><span id="dayS"></span><span id="dayL"></span></div>&nbsp;
+        <div id="dateContainer"><span id="dd"></span></div>&#8209;
+        <div id="monthContainer"><span id="mm"></span><span id="monthS"></span><span id="monthL"></span></div>&#8209;
+        <div id="yearContainer"><span id="yyyy"></span><span id="yy"></span></div>&nbsp;
+        <div id="hourContainer"><span id="hh24"></span><span id="hh12"></span></div>&#58;
+        <div id="minuteContainer"><span id="mi"></span></div>&#58;
+        <div id="secondContainer"><span id="ss"></span></div>&#58;
+        <div id="millisecondContainer"><span id="ms"></span></div>&nbsp;
+        <div id="ampmhrContainer"><span id="ampm"></span><span id="hrs"></span></div>&nbsp;
+        <div id="timezoneContainer"><span id="utc"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/clockStyle.js"></script>
+
+</body>
+</html>
